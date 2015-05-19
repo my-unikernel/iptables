@@ -5,6 +5,7 @@
 
 struct xt_colo_primary_info {
 	__u32			index;
+	char forward_dev[256];
 
 	/* for kernel module internal use only */
 	struct colo_primary *colo __attribute__((aligned(8)));
