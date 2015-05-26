@@ -19,10 +19,7 @@ static const struct xt_option_entry colo_opts[] = {
 
 static void colo_parse(struct xt_option_call *cb)
 {
-	struct xt_colo_secondary_info *einfo = cb->data;
-
 	xtables_option_parse(cb);
-	einfo->index = cb->val.u32;
 }
 
 static void colo_print(const void *ip, const struct xt_entry_target *target,
