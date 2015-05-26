@@ -33,10 +33,7 @@ static void PMYCOLO_help(void)
 
 static void colo_parse(struct xt_option_call *cb)
 {
-	struct xt_colo_primary_info *einfo = cb->data;
-
 	xtables_option_parse(cb);
-	einfo->index = cb->val.u32;
 }
 
 
