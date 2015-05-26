@@ -43,10 +43,10 @@ static void colo_print(const void *ip, const struct xt_entry_target *target,
 	const struct xt_colo_primary_info *einfo =
 		(const struct xt_colo_primary_info *)target->data;
 
-	printf("PMYCOLO");
+	printf(" [PMYCOLO:");
 
-	printf("index %d", einfo->index);
-	printf("forward-dev %s", einfo->forward_dev);
+	printf(" index %d,", einfo->index);
+	printf(" forward-dev %s]", einfo->forward_dev);
 }
 
 static void colo_save(const void *ip, const struct xt_entry_target *target)
