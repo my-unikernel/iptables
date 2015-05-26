@@ -33,10 +33,7 @@ static void PMYCOLO_help(void)
 
 static void colo_parse(struct xt_option_call *cb)
 {
-	struct xt_colo_primary_info *einfo = cb->data;
-
 	xtables_option_parse(cb);
-	einfo->index = cb->val.u32;
 }
 
 
@@ -46,10 +43,10 @@ static void colo_print(const void *ip, const struct xt_entry_target *target,
 	const struct xt_colo_primary_info *einfo =
 		(const struct xt_colo_primary_info *)target->data;
 
-	printf("PMYCOLO");
+	printf(" [PMYCOLO:");
 
-	printf("index %d", einfo->index);
-	printf("forward-dev %s", einfo->forward_dev);
+	printf(" index %d,", einfo->index);
+	printf(" forward-dev %s]", einfo->forward_dev);
 }
 
 static void colo_save(const void *ip, const struct xt_entry_target *target)
