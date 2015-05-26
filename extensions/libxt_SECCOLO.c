@@ -28,9 +28,9 @@ static void colo_print(const void *ip, const struct xt_entry_target *target,
 	const struct xt_colo_secondary_info *einfo =
 		(const struct xt_colo_secondary_info *)target->data;
 
-	printf("SECCOLO");
+	printf(" [SECCOLO:");
 
-	printf("index %d", einfo->index);
+	printf(" index %d]", einfo->index);
 }
 
 static void colo_save(const void *ip, const struct xt_entry_target *target)
